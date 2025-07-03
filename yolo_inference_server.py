@@ -97,7 +97,7 @@ async def lifespan(app: FastAPI):
     logger.info("🚀 Starting up YOLO Inference Server...")
     
     # Get model path from environment variable or use default
-    model_path = os.getenv("YOLO_MODEL_PATH", "runs/detect/metasejong_objects/weights/best.pt")
+    model_path = os.getenv("YOLO_MODEL_PATH", "runs/detect/metasejong_objects_augmented/weights/best.pt")
     
     # Try alternative paths if default doesn't exist
     if not os.path.exists(model_path):

@@ -83,8 +83,12 @@ Health check endpoint
 
 The server attempts to load models in the following order:
 1. Path specified by `YOLO_MODEL_PATH` environment variable
-2. `runs/detect/metasejong_objects/weights/best.pt` (default)
+2. `runs/detect/metasejong_objects_augmented/weights/best.pt` (default - trained with image augmentation)
 3. Alternative paths if default not found
+
+**Note:** The default model path now points to the augmented training results. If you prefer to use the original model without augmentation, you can:
+- Set the environment variable: `YOLO_MODEL_PATH=runs/detect/metasejong_objects/weights/best.pt`
+- Or use the `--model-path` argument when starting the server: `--model-path runs/detect/metasejong_objects/weights/best.pt`
 
 ## Response Format
 

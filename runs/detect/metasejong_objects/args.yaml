@@ -1,6 +1,6 @@
 task: detect
 mode: train
-model: /home/kwdahun/metasejong-airobotics/sources/yolo11n.pt
+model: /home/kwdahun/metasejong-YOLO/runs/detect/metasejong_objects/weights/best.pt
 data: /home/kwdahun/metasejong-airobotics/data/labelme_yolo_dataset/dataset.yaml
 epochs: 50
 time: null
